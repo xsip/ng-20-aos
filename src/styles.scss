@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+:root {
+  --color-primary: rgba(235, 235, 235, 1);
+  --color-primary-2: white;
+  --color-secondary: rgba(35, 35, 35, 1);
+  --color-button: rgba(35,35,125,1);
+  --color-button-hover: rgba(35,35,105,1);
+  --color-button-disabled: rgba(235, 235, 235, 1);
+}
+
+.dark {
+  --color-primary: rgba(35, 35, 35, 1);
+  --color-primary-2: rgba(55,55,55,1);
+  --color-secondary: rgba(235, 235, 235, 1);
+  --color-button: rgba(35,35,95,1);
+  --color-button-hover: rgba(35,35,75,1);
+  --color-button-disabled: rgba(55,55,55,1);
+}
+
+
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-primary-2: var(--color-primary-2);
+  --color-secondary: var(--color-secondary);
+  --color-button: var(--color-button);
+  --color-button-hover: var(--color-button-hover);
+  --color-button-disabled: var(--color-button-disabled);
+}
